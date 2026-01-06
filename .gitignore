@@ -1,0 +1,11 @@
+
+__pycache__
+docs/Personal
+*.apkg
+*.txt
+*.json
+!config.json
+!manifest.json
+
+anki_console.sh
+TODO.md
