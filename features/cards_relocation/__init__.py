@@ -59,13 +59,13 @@ def mp_import_anki_package_raw(self, message):
     tempfile,cursor,bdname=None,None,""
     if is_relocate_activated:
         new_file_path = pb2.ImportAnkiPackageRequest.FromString(message).package_path
-        path=new_file_path.lower()
+        path=new_file_path
         if not path.endswith(".apkg"):
             return original_import_raw(self, message)
         tempfile=AnkiPackageReader(path)
         cursor,bdname=tempfile.__enter__()
         
-        did_rename_occur = rename_old_deck_who_match(new_file_path,cursor,bdname)
+        did_rename_occur = rename_old_deck_who_match(cursor,bdname)
         if flags.FLAGS["PRINT_DEBUG"]:
             print(f"did_rename_occur: {did_rename_occur}")
         

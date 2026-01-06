@@ -47,7 +47,7 @@ class AnkiPackageReader:
 
             return self.cursor,db_name
 
-    def __exit__(self):
+    def __exit__(self, exc_type, exc_val, exc_tb):
         
         if self.conn:
             self.conn.close()

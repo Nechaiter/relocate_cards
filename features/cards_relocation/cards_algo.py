@@ -125,10 +125,7 @@ def get_notes_info_from_file(cards_to_move:list,cursor: sqlite3.Cursor,db_name: 
     return card_info
 
 
-def rename_old_deck_who_match(path:str,cursor: sqlite3.Cursor,db_name: str) -> bool:
-    
-
-    path=path.lower()
+def rename_old_deck_who_match(cursor: sqlite3.Cursor,db_name: str) -> bool:
     
     deck_name=""
 
