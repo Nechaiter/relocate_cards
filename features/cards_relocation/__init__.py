@@ -63,8 +63,12 @@ def mp_import_anki_package_raw(self, message):
         if not path.endswith(".apkg"):
             return original_import_raw(self, message)
         tempfile=AnkiPackageReader(path)
-        cursor,bdname=tempfile.__enter__()
-        
+        try:
+            cursor,bdname=tempfile.__enter__()
+        except Exception as e:
+            if flags.FLAGS["PRINT_DEBUG"]:
+                print(f"Error trying to open apgk file: {e}")
+            return original_import_raw(self, message)
         did_rename_occur = rename_old_deck_who_match(cursor,bdname)
         if flags.FLAGS["PRINT_DEBUG"]:
             print(f"did_rename_occur: {did_rename_occur}")
