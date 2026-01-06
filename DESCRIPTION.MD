@@ -1,4 +1,3 @@
-# Relocate Cards on Import
 
 This addon adds a handy feature to the import process: it allows you to **automatically move your existing cards** to the new deck you are importing, if they are detected as duplicates or conflicting.
 
@@ -64,13 +63,16 @@ While the addon has been tested for imports, keeping it active during your daily
 * If you update Anki, this addon might stop working correctly due to internal changes in the app.
 
 ## 🐞 Issues & Feedback
-If the addon does not work as expected, please [**report it on GitHub Issues**](https://github.com/tu_usuario/tu_repo/issues). Since this is a personal project, immediate fixes aren't guaranteed, but reporting bugs helps me.
+If the addon does not work as expected, please [**report it on GitHub Issues**](https://github.com/Nechaiter/relocate_cards/issues). Since this is a personal project, immediate fixes aren't guaranteed, but reporting bugs helps me.
 
 ## Scheenshots
+**Before Relocation**
 
-<img src="https://raw.githubusercontent.com/Nechaiter/TU_REPO/main/screenshots/after_import.png" width="500">
+<img src="https://raw.githubusercontent.com/Nechaiter/relocate_cards/main/screenshots/before_import.png" width="500">
 
 ---
+**After Relocation**
 
-<img src="https://raw.githubusercontent.com/Nechaiter/TU_REPO/main/screenshots/before_import.png" width="500">
+<img src="https://raw.githubusercontent.com/Nechaiter/relocate_cards/main/screenshots/after_import.png" width="500">
+
 
