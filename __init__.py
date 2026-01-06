@@ -11,7 +11,7 @@ logger.setLevel(logging.DEBUG)
 
 
 def main():
-    import libs
+    from . import libs
     from .features import cards_relocation
     from .features import import_ui
 main()
