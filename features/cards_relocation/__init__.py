@@ -89,9 +89,17 @@ def mp_import_anki_package_raw(self, message):
             cards_to_move = (
                 list(response.log.conflicting) + 
                 list(response.log.updated) + 
-                list(response.log.duplicate) + 
-                list(response.log.first_field_match)
+                list(response.log.duplicate)
             )
+
+
+            # cards_to_move = (
+            #     list(response.log.conflicting) + 
+            #     list(response.log.updated) + 
+            #     list(response.log.duplicate) + 
+            #     list(response.log.first_field_match)
+            # )
+
 
             assert cursor,bdname is not None
             notes_info=get_notes_info_from_file(cards_to_move,cursor,bdname)
