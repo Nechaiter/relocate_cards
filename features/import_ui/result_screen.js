@@ -10,7 +10,7 @@
 
 
         const headers = Array.from(document.querySelectorAll('h1'));
-        const overviewHeader = headers.find(h => h.textContent.trim() === 'Overview');
+        const overviewHeader = headers.find(h => h.textContent.trim().length > 0);
 
         if (!overviewHeader) return; 
 

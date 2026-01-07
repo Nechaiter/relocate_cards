@@ -19,9 +19,15 @@ function attemptInjection(){
         let importOptionsRow = null;
         let allRows = mainContainer.querySelectorAll('[class*="row"]');
         
+
         for (let i = 0; i < allRows.length; i++) {
             let h1 = allRows[i].querySelector('h1');
-            if (h1 && h1.textContent.trim().match(/Import\s+options/i)) {
+            
+            let hasSettings = allRows[i].querySelector('input[type="checkbox"]') || 
+                            allRows[i].querySelector('.form-switch') ||
+                            allRows[i].querySelector('input');
+
+            if (h1 && hasSettings) {
                 importOptionsRow = allRows[i];
                 break;
             }
@@ -99,7 +105,7 @@ function attemptInjection(){
                             '<' + classes.wrapper.split(' ')[0] + ' style="display: contents; --col-size: 4;">' +
                                 '<div class="' + classes.col + '">' +
                                     '<label class="' + classes.label + '" for="relocate_cards_id">' +
-                                        '<div class="' + classes.settingTitle + '">Relocate existing cards to imported deck</div>' +
+                                        '<div class="' + classes.settingTitle + '">Relocate existing cards to the imported deck</div>' +
                                     '</label>' +
                                 '</div>' +
                             '</' + classes.wrapper.split(' ')[0] + '>' +
